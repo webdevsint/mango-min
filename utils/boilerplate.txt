@@ -1,0 +1,1 @@
+const path=require("path"),fs=require("fs"),data=require("./data.json"),schema=${SCHEMA},save=a=>{fs.writeFileSync(path.resolve(__dirname,"./data.json"),JSON.stringify(a))},addEntry=a=>{data.push(a),save(data)},removeEntry=a=>{data.splice(a,1),save(data)};module.exports={schema:"${SCHEMA}",addEntry,removeEntry};
